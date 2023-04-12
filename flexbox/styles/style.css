@@ -25,8 +25,8 @@
   /* justify-content: space-evenly; */
   flex-wrap: wrap;
   border: 3px solid #ff11af;
-  /* align-items: end; */
-  align-content: center;
+  align-items: center;
+  /* align-content: center; */
   min-height: 80vh;
 }
 
@@ -43,12 +43,16 @@
 }
 .item2 {
   background-color: #23f;
+  align-self: flex-end;
 }
 .item3 {
   background-color: #a33;
+  align-self: start;
 }
 .item4 {
+  height: auto;
   background-color: #991;
+  align-self: stretch;
 }
 .item5 {
   background-color: #2a2;
