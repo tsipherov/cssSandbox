@@ -64,3 +64,9 @@
 .item10 {
   background-color: #9f9;
 }
+
+@media all and (max-width: 1204px) {
+  .item5 {
+    order: 1;
+  }
+}
