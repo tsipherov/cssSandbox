@@ -25,7 +25,7 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
   border: 3px solid #ff11af;
-
+  align-items: center;
   min-height: 80vh;
 }
 
