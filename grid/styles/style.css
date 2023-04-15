@@ -21,8 +21,9 @@
 
 .gridcontainer {
   display: grid;
-  grid-template-columns: 2fr 1fr 2fr;
-  grid-template-rows: 150px 150px;
+  /* grid-template-columns: 2fr 1fr 2fr; */
+  /* grid-template-rows: 150px 150px; */
+  gap: 15px;
   border: 3px solid #ff11af;
   min-height: 80vh;
 }
@@ -36,15 +37,22 @@
 }
 .item1 {
   background-color: #2ff;
+  grid-column: 1/5;
+  grid-row: 1/2;
 }
 .item2 {
   background-color: #23f;
+  grid-column: 1/2;
+  grid-row: 2/4;
 }
 .item3 {
   background-color: #a33;
+  grid-column: 2/4;
+  grid-row: 2/4;
 }
 .item4 {
   background-color: #991;
+  grid-column: 4/5;
 }
 .item5 {
   background-color: #2a2;
