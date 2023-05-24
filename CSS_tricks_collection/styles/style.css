@@ -1,9 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   border: 0;
 }
+
+:root {
+  font-size: 50px;
+  --bgc-sec-1: #c0f2fb;
+  --bgc-sec-2: #716e6e;
+  --link-font: "Roboto", sans-serif;
+  --link-color: deepskyblue;
+}
+
 .container {
   max-width: 1280px;
   min-height: 100vh;
@@ -13,17 +25,21 @@
 }
 
 section {
-  background-color: #c0f2fb;
+  font-size: 16px;
+  background-color: var(--bgc-sec-1);
   border-bottom: 3px dotted #de6203;
   padding: 25px;
 }
 
 section:nth-child(2) {
-  background-color: #716e6e;
+  background-color: var(--bgc-sec-2);
 }
 
 a {
+  /* font-family: "Dancing Script", cursive; */
+  font-family: var(--link-font);
   text-decoration: none;
+  color: var(--link-color);
 }
 
 li {
@@ -37,7 +53,7 @@ a > span {
 
 .title {
   font-family: sans-serif;
-  font-size: 100px;
+  font-size: 2rem;
   font-weight: 800;
   color: transparent;
   margin: 25px auto;
@@ -58,7 +74,7 @@ a > span {
 
 .txtAnimatedBg li {
   font-family: sans-serif;
-  font-size: 80px;
+  font-size: 1.6rem;
   font-weight: 700;
   padding: 0 15px;
   cursor: pointer;
