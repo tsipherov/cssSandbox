@@ -173,3 +173,26 @@ a > span {
       -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
   }
 }
+
+/* ########## Glitch text ########### */
+
+.wrapText {
+}
+.wrapText img {
+  max-width: 300px;
+  float: right;
+  shape-outside: polygon(3px 187px, 267px 3px, 291px 226px, 2px 227px);
+  /* shape-margin: 0.5rem; */
+}
+.wrapText p {
+  text-align: left;
+  padding-bottom: 10px;
+}
+.wrapText h2 {
+  margin: 20px 0;
+  font-size: 0.6rem;
+}
+.YTLink {
+  display: block;
+  margin-top: 25px;
+}
