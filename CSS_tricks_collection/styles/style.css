@@ -12,6 +12,7 @@
   font-size: 50px;
   --bgc-sec-1: #c0f2fb;
   --bgc-sec-2: #716e6e;
+  --bgc-gray-color: #ccc;
   --link-font: "Roboto", sans-serif;
   --link-color: deepskyblue;
 }
@@ -180,8 +181,6 @@ a > span {
 
 /* ########## Wrap text around any shape ########### */
 
-.wrapText {
-}
 .wrapText img {
   max-width: 300px;
   float: right;
@@ -257,4 +256,36 @@ a > span {
   to {
     transform: translate(50%, 50%);
   }
+}
+
+/* ########## 3D Text Hover Effect ########### */
+
+.text3d {
+  background-color: var(--bgc-gray-color);
+}
+.contentText {
+  color: #eee;
+  display: inline-block;
+  /* text-transform: uppercase; */
+  font-size: 100px;
+  text-shadow: 0 1px 0 rgb(190, 190, 190), 0 2px 0 rgb(185, 185, 185),
+    0 3px 0 rgb(180, 180, 180), 0 4px 0 rgb(175, 175, 175),
+    0 5px 0 rgb(170, 170, 170), 0 6px 0 rgb(165, 165, 165),
+    0 7px 0 rgb(160, 160, 160), 0 1px 5px rgba(0, 0, 0, 0.05),
+    0 3px 5px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.15),
+    0 7px 10px rgba(0, 0, 0, 0.2), 0 10px 15px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.contentText:hover {
+  text-shadow: 0 1px 0 rgb(190, 190, 190), 0 2px 0 rgb(185, 185, 185),
+    0 3px 0 rgb(180, 180, 180), 0 4px 0 rgb(175, 175, 175),
+    0 5px 0 rgb(170, 170, 170), 0 6px 0 rgb(165, 165, 165),
+    0 7px 0 rgb(160, 160, 160), 0 8px 0 rgb(155, 155, 155),
+    0 9px 0 rgb(150, 150, 150), 0 1px 5px rgba(0, 0, 0, 0.05),
+    0 5px 5px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.15),
+    0 15px 10px rgba(0, 0, 0, 0.2), 0 20px 15px rgba(0, 0, 0, 0.25);
+  transform: translate(-1%, -1%);
+  transition: all 0.3s ease-in-out;
 }
