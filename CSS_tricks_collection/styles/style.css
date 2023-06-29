@@ -280,7 +280,6 @@ a>span {
 .contentText {
   color: #eee;
   display: inline-block;
-  /* text-transform: uppercase; */
   font-size: 100px;
   text-shadow: 0 1px 0 rgb(190, 190, 190), 0 2px 0 rgb(185, 185, 185),
     0 3px 0 rgb(180, 180, 180), 0 4px 0 rgb(175, 175, 175),
@@ -338,7 +337,6 @@ a>span {
 
 .txtCont::before {
   content: "Effect 3D";
-  /* content: "Hello"; */
   position: absolute;
   top: 0;
   left: 0;
