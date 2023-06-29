@@ -51,11 +51,12 @@ a {
 li {
   list-style: none;
 }
-a > span {
+
+a>span {
   color: red;
 }
 
-/* #################################### */
+/* ########## Animationed Text Background Effect ############ */
 
 .title {
   font-size: 2rem;
@@ -89,12 +90,10 @@ a > span {
   -webkit-background-clip: text;
   background-clip: text;
   background-repeat: no-repeat;
-  background-image: linear-gradient(
-    135deg,
-    deepskyblue 0%,
-    deepskyblue 50%,
-    transparent 50%
-  );
+  background-image: linear-gradient(135deg,
+      deepskyblue 0%,
+      deepskyblue 50%,
+      transparent 50%);
   background-size: 0 100%;
   transition: background-size linear 0.3s;
 }
@@ -124,6 +123,7 @@ a > span {
   animation: glitch 500ms linear infinite;
   position: relative;
 }
+
 .glitch h2 span {
   position: absolute;
   top: 0;
@@ -136,6 +136,7 @@ a > span {
   transform: translate(-0.025em, -0.0125em);
   opacity: 0.8;
 }
+
 .glitch h2 span:last-child {
   animation: glitch 375ms infinite;
   clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
@@ -149,29 +150,35 @@ a > span {
       -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
       -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
   }
+
   14% {
     text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
       -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
       -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
   }
+
   15% {
     text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
       0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
       -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
   }
+
   49% {
     text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
       0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
       -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
   }
+
   50% {
     text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
       0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
   }
+
   99% {
     text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
       0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
   }
+
   100% {
     text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
       -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
@@ -187,14 +194,17 @@ a > span {
   shape-outside: polygon(3px 187px, 267px 3px, 291px 226px, 2px 227px);
   /* shape-margin: 0.5rem; */
 }
+
 .wrapText p {
   text-align: left;
   padding-bottom: 10px;
 }
+
 .wrapText h2 {
   margin: 20px 0;
   font-size: 0.6rem;
 }
+
 .YTLink {
   display: block;
   margin-top: 25px;
@@ -228,11 +238,9 @@ a > span {
 }
 
 .gradient {
-  background: linear-gradient(
-    118deg,
-    rgba(34, 173, 195, 1) 2%,
-    rgba(253, 187, 45, 1) 97%
-  );
+  background: linear-gradient(118deg,
+      rgba(34, 173, 195, 1) 2%,
+      rgba(253, 187, 45, 1) 97%);
   position: absolute;
   top: 0;
   left: 0;
@@ -263,6 +271,7 @@ a > span {
 .text3d {
   background-color: var(--bgc-gray-color);
 }
+
 .contentText {
   color: #eee;
   display: inline-block;
@@ -288,4 +297,53 @@ a > span {
     0 15px 10px rgba(0, 0, 0, 0.2), 0 20px 15px rgba(0, 0, 0, 0.25);
   transform: translate(-1%, -1%);
   transition: all 0.3s ease-in-out;
+}
+
+/* ########## CSS 3D Text Effect ########### */
+
+.txtCont {
+  margin-top: 40px;
+  display: inline-block;
+  font-size: 80px;
+  color: transparent;
+  transform: skewY(-6deg);
+  transform-origin: bottom left;
+  text-shadow:
+
+    1px -1px 10px rgba(255, 255, 255, 0.4),
+    0 -1px 10px rgba(255, 255, 255, 0.4),
+    -1px -1px 10px rgba(255, 255, 255, 0.4),
+
+    0 -2px 3px white,
+    -1px -2px 3px white,
+    -2px -2px 3px white,
+
+    -1px -3px 3px #ddd,
+    -2px -3px 3px #ddd,
+    -3px -3px 3px #ddd,
+
+    -2px -4px 2px white,
+    -3px -4px 2px white,
+    -4px -4px 2px white,
+
+    -3px -5px 1px white,
+    -4px -5px 1px white,
+    -5px -5px 1px white;
+}
+
+.txtCont::before {
+  content: "Effect 3D";
+  /* content: "Hello"; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: skewX(30deg);
+  transform-origin: bottom left;
+  z-index: -1;
+  color: transparent;
+  text-shadow:
+    15px 0 10px rgba(0, 0, 0, 0.35),
+    15px 0 15px rgba(0, 0, 0, 0.3),
+    15px 0 20px rgba(0, 0, 0, 0.25),
+    15px 0 25px rgba(0, 0, 0, 0.2);
 }
