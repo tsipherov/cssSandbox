@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 
+@font-face {
+  font-family: neon;
+  src: url(../fonts/hellodenverdisplayregular_v1.6.ttf);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -346,4 +351,39 @@ a>span {
     15px 0 15px rgba(0, 0, 0, 0.3),
     15px 0 20px rgba(0, 0, 0, 0.25),
     15px 0 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ########## CSS 3D Text Effect ########### */
+
+.neonBoxWrap {
+  display: inline-block;
+  border: 4px solid #ffd8d8;
+  padding: 0.5rem;
+  margin: 0.6rem 0;
+  box-shadow:
+    0 0 0.1vw 0.4vw #fff7f7,
+    0 0 0.4vw 0.6vw #e97272,
+    0 0 4vw 0.4vw #e50b0b,
+
+    inset 0 0 1.5vw 0.4vw #e50b0b,
+    inset 0 0 0.4vw 0.2vw #e97272,
+    inset 0 0 0.5vw 0.2vw #fff7f7;
+  border-radius: .5rem;
+}
+
+.realNeonText {
+  color: #ffd8d8;
+  font-family: neon;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-shadow:
+    .1vw 0vw .25vw #ffd8d8, .2vw 0vw .25vw #ffd8d8, .4vw 0vw .25vw #ffd8d8,
+
+    .1vw 0vw 0vw #f25757, .2vw 0vw 0vw #f25757, .4vw 0vw 0vw #f25757,
+    .1vw 0vw .1vw #f25757, .2vw 0vw .1vw #f25757, .4vw 0vw .1vw #f25757,
+    .1vw 0vw 2vw #f25757, .2vw 0vw 2vw #f25757, .4vw 0vw 2vw #f25757,
+
+    .1vw 0vw 1vw #e50b0b, .2vw 0vw 1vw #e50b0b, .4vw 0vw 5vw #e50b0b,
+    .1vw 0vw 5vw #e50b0b, .2vw 0vw 20vw #e50b0b, .4vw 0vw 10vw #e50b0b,
+    .1vw 0vw 10vw #e50b0b, .2vw 0vw 30vw #e50b0b, .4vw 0vw 10vw #e50b0b;
 }
