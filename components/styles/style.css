@@ -1,0 +1,172 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+body {
+  font-size: 16px;
+  background-color: #62a8c7;
+}
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+  text-align: center;
+}
+
+.title {
+  color: #798a9b;
+  margin: 25px auto;
+  font-size: 4rem;
+  text-transform: uppercase;
+  text-shadow:
+    1px 1px 5px #333,
+    2px 2px 7px #444,
+    3px 3px 9px #555,
+    4px 4px 12px #666,
+    5px 5px 15px #777;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  border-bottom: 2px dotted #798a9b;
+  padding: 5rem 0;
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+}
+
+.linkToLesson {
+  font-size: 1.2rem;
+  margin-top: 3rem;
+}
+
+.yt {
+  color: red
+}
+
+/* Круговой график с таймером на CSS и HTML */
+
+.timerWrap {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.timerWrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #326b8a;
+  z-index: 3;
+  animation: timerMaskLeft 10s steps(1, end) forwards;
+}
+
+.timerWrap::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  background-color: #bdf806;
+  z-index: 3;
+  animation: timerMaskRight 10s steps(1, end) forwards;
+}
+
+.timerLine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #326b8a;
+  animation: timerLineAnim 10s linear forwards;
+  z-index: 2;
+}
+
+.timerLine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #bdf806;
+  border-right: 3px solid red;
+}
+
+.timerBody {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #62a8c7;
+  text-align: center;
+  overflow: hidden;
+  z-index: 4;
+}
+
+.timerCounter {
+  animation: counter 10s steps(9, end) forwards;
+}
+
+.timerCounter span {
+  color: #326b8a;
+  font-size: 3rem;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes counter {
+  0% {}
+
+  100% {
+    transform: translateY(-900px);
+  }
+}
+
+@keyframes timerLineAnim {
+  0% {}
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes timerMaskLeft {
+  0% {
+    visibility: visible;
+  }
+
+  50%,
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes timerMaskRight {
+  0% {
+    visibility: hidden;
+  }
+
+  50%,
+  100% {
+    visibility: visible;
+  }
+}
