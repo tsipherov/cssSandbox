@@ -6,12 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UI components</title>
     <link rel="stylesheet" href="styles/style.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+      integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /> -->
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+      integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script> -->
+    <script src="./all.min.js"></script>
   </head>
   <body>
     <div class="container">
       <header>
         <h1 class="title">UI components</h1>
       </header>
+      <!-- ######################################### -->
+      <!-- Круговой график с таймером на CSS и HTML  -->
+      <!-- ######################################### -->
       <section class="timerSec">
         <div class="timerWrap">
           <div class="timerLine"></div>
@@ -27,6 +44,46 @@
           <a href="https://www.youtube.com/watch?v=I8BTOxhqJ6c" target="_blank"
             ><span class="yt">YouTube</span> Круговой график с таймером на CSS и
             HTML</a
+          >
+        </div>
+      </section>
+      <!-- ########################################## -->
+      <!-- Animated Navigation Menu Bar Hover Effect  -->
+      <!-- ########################################## -->
+      <section class="menuBar">
+        <input type="radio" name="slider" id="home" checked />
+        <input type="radio" name="slider" id="blog" />
+        <input type="radio" name="slider" id="code" />
+        <input type="radio" name="slider" id="help" />
+        <input type="radio" name="slider" id="user" />
+        <nav class="navMenuBar">
+          <div class="slider"></div>
+          <label for="home" class="home">
+            <i class="fas fa-home"></i>
+            Home
+          </label>
+          <label for="blog" class="blog">
+            <i class="fas fa-blog"></i>
+            Blog
+          </label>
+          <label for="code" class="code">
+            <i class="fas fa-code"></i>
+            Code
+          </label>
+          <label for="help" class="help">
+            <i class="fas fa-envelope"></i>
+            Help
+          </label>
+          <label for="user" class="user">
+            <i class="fas fa-user"></i>
+            About
+          </label>
+        </nav>
+
+        <div class="linkToLesson">
+          <a href="https://www.youtube.com/watch?v=ewsXz0Du9iA" target="_blank"
+            ><span class="yt">YouTube</span> Animated Navigation Menu Bar Hover
+            Effect</a
           >
         </div>
       </section>
