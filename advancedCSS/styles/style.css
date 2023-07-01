@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+.container {
+  max-width: 1280px;
+  text-align: center;
+  margin: auto;
+}
+
+.title {
+  color: red;
+  margin: 25px auto;
+}
+
+.linkToLesson {
+  margin-top: 2rem;
+}
+
+.linkToLesson a {
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.yt {
+  color: red
+}
+
+/* ########################################################## */
+/* Соотношение сторон. CSS свойства aspect-ratio и object-fit */
+/* ########################################################## */
+
+.posts {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #ddd;
+  gap: 10px;
+}
+
+.post {
+  width: 380px;
+  border: 1px solid #ccc;
+}
+
+.post img {
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
