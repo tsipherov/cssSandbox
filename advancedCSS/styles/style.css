@@ -11,6 +11,16 @@
   margin: auto;
 }
 
+section {
+  text-align: center;
+  background-color: #ddd;
+  padding: 30px 0;
+}
+
+section:last-child {
+  margin-bottom: 100px;
+}
+
 .title {
   color: red;
   margin: 25px auto;
@@ -36,7 +46,6 @@
 .posts {
   display: flex;
   justify-content: space-evenly;
-  background-color: #ddd;
   gap: 10px;
 }
 
@@ -50,3 +59,17 @@
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
+
+/* ########################################################## */
+/*  Свойство image-set. Эффективные фоновые изображения в CSS */
+/* ########################################################## */
+
+.pictureSec img {
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* ########################################################## */
+/*  Свойство image-set. Эффективные фоновые изображения в CSS */
+/* ########################################################## */

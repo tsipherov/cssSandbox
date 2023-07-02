@@ -1,49 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="styles/style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h1 class="title">Hello world</h1>
-      <section>
-        <div class="posts">
-          <div class="post">
-            <img src="images/m_1.png" alt="some img" />
-            <h2>Some header</h2>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta,
-              eum.
-            </p>
-          </div>
-          <div class="post">
-            <img src="images/m_2.png" alt="some img" />
-            <h2>Some header</h2>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta,
-              eum.
-            </p>
-          </div>
-          <div class="post">
-            <img src="images/m_3.png" alt="some img" />
-            <h2>Some header</h2>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta,
-              eum.
-            </p>
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="title">Адаптивные изображения</h1>
+    <section>
+      <div class="posts">
+        <div class="post">
+          <img src="images/m_1.png" alt="some img" />
+          <h2>Some header</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta,
+            eum.
+          </p>
         </div>
-        <div class="linkToLesson">
-          <a href="https://www.youtube.com/watch?v=93eVd-lUVLM" target="_blank"
-            ><span class="yt">YouTube</span> Соотношение сторон. CSS свойства
-            aspect-ratio и object-fit (adaptive images)</a
-          >
+        <div class="post">
+          <img src="images/m_2.png" alt="some img" />
+          <h2>Some header</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta,
+            eum.
+          </p>
         </div>
-      </section>
-    </div>
-  </body>
+        <div class="post">
+          <img src="images/m_3.png" alt="some img" />
+          <h2>Some header</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta,
+            eum.
+          </p>
+        </div>
+      </div>
+      <div class="linkToLesson">
+        <a href="https://www.youtube.com/watch?v=93eVd-lUVLM" target="_blank"><span class="yt">YouTube</span>
+          Соотношение сторон. CSS свойства
+          aspect-ratio и object-fit (adaptive images)</a><br>
+        <a href="https://www.youtube.com/watch?v=nTtuiBXKp88" target="_blank"><span class="yt">YouTube</span>
+          Адаптивные изображения. Практические приемы верстки картинок. CSS object-fit.</a>
+      </div>
+    </section>
+
+    <!-- /* ########################################################## */ -->
+    <!-- /*           Адаптивные изображения. Teg <picture>            */ -->
+    <!-- /* ########################################################## */ -->
+
+    <section class="pictureSec">
+      <div>
+        <picture>
+          <source srcset="images/m_1_384.jpg" type="image/jpeg" media="(max-width:350px)">
+          <source srcset="images/m_1_768.jpg" type="image/jpeg" media="(max-width:768px)">
+          <source srcset="images/m_1_1344.jpg" type="image/jpeg" media="(min-width:769px)">
+          <img src="images/m_1_384.jpg" alt="some img" />
+        </picture>
+        <h2>Адаптивные изображения. Teg picture</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta,
+          eum.
+        </p>
+      </div>
+      <div class="linkToLesson">
+        <a href="https://youtu.be/nTtuiBXKp88?t=853" target="_blank">
+          <span class="yt">YouTube</span> Адаптивные изображения. Практические приемы верстки картинок. HTML
+          picture.</a>
+      </div>
+    </section>
+
+    <!-- /* ########################################################## */ -->
+    <!-- /*  Свойство image-set. Эффективные фоновые изображения в CSS */ -->
+    <!-- /* ########################################################## */ -->
+
+    <section class="imageSetSec">
+      <div>
+        <picture>
+          <source srcset="images/m_1_384.jpg" type="image/jpeg" media="(max-width:350px)">
+          <source srcset="images/m_1_768.jpg" type="image/jpeg" media="(max-width:768px)">
+          <source srcset="images/m_1_1344.jpg" type="image/jpeg" media="(min-width:769px)">
+          <img src="images/m_1_384.jpg" alt="some img" />
+        </picture>
+        <h2>Some header</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta,
+          eum.
+        </p>
+      </div>
+      <div class="linkToLesson">
+        <a href="https://youtu.be/XaFBv6yG3B4" target="_blank">
+          <span class="yt">YouTube</span> Свойство image-set. Эффективные фоновые изображения в CSS</a>
+      </div>
+    </section>
+  </div>
+</body>
+
 </html>
