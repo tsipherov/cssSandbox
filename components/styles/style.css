@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
+
 * {
   padding: 0;
   margin: 0;
@@ -11,6 +14,70 @@
   --btn-clr: #2f0000;
   --accent-clr: #07e8ff;
   --brd-sz: 3px;
+
+  --neon-clr: #1bffff;
+  --dark-clr: #333;
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    --neon-clr: #009245;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 600px) {
+  :root {
+    --neon-clr: #ed1e79;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 700px) {
+  :root {
+    --neon-clr: #989898;
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 800px) {
+  :root {
+    --neon-clr: #45f705;
+  }
+}
+
+@media screen and (min-width: 801px) and (max-width: 900px) {
+  :root {
+    --neon-clr: #05e7f7;
+  }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1000px) {
+  :root {
+    --neon-clr: #0521f7;
+  }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1100px) {
+  :root {
+    --neon-clr: #a205f7;
+
+  }
+}
+
+@media screen and (min-width: 1101px) and (max-width: 1200px) {
+  :root {
+    --neon-clr: #f305f7;
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1300px) {
+  :root {
+    --neon-clr: #f7052d;
+  }
+}
+
+@media screen and (min-width: 1301px) {
+  :root {
+    --neon-clr: #ef930a;
+  }
 }
 
 body {
@@ -369,4 +436,104 @@ section:last-child {
   100% {
     transform: translateY(100%);
   }
+}
+
+/* ######################################### */
+/* ###      Кнопка с неоновым светом      ## */
+/* ######################################### */
+
+.neonBtnSec {
+  background: linear-gradient(45deg, var(--dark-clr), #5a5454);
+}
+
+.neonBtnSec button {
+  position: relative;
+  font-family: 'Gochi Hand', cursive;
+  font-size: 4rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--neon-clr);
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  padding: 1rem 2rem;
+  overflow: hidden;
+  transition: .6s ease;
+}
+
+.neonBtnSec button:hover {
+  color: var(--dark-clr);
+  background-color: var(--neon-clr);
+  transition-delay: .5s;
+  box-shadow: 0 0 10px var(--neon-clr),
+    0 0 40px var(--neon-clr),
+    0 0 80px var(--neon-clr);
+}
+
+.neonBtnSec button:hover span:nth-child(1) {
+  left: 100%
+}
+
+.neonBtnSec button:hover span:nth-child(2) {
+  top: 100%
+}
+
+.neonBtnSec button:hover span:nth-child(3) {
+  right: 100%
+}
+
+.neonBtnSec button:hover span:nth-child(4) {
+  bottom: 100%
+}
+
+.neonBtnSec button>span {
+  display: block;
+  position: absolute;
+  transition: .6s ease;
+}
+
+.neonBtnSec button>span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: var(--brd-sz);
+  background: linear-gradient(90deg, transparent, var(--neon-clr));
+  transition-delay: .25s;
+}
+
+.neonBtnSec button>span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  height: 100%;
+  width: var(--brd-sz);
+  background: linear-gradient(180deg, transparent, var(--neon-clr));
+  transition-delay: .25s;
+}
+
+.neonBtnSec button>span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: var(--brd-sz);
+  background: linear-gradient(-90deg, transparent, var(--neon-clr));
+  transition-delay: .25s;
+}
+
+.neonBtnSec button>span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  height: 100%;
+  width: var(--brd-sz);
+  background: linear-gradient(0deg, transparent, var(--neon-clr));
+  transition-delay: .25s;
+}
+
+.neonBtnSec a {
+  color: var(--neon-clr)
+}
+
+.neonBtnSec p {
+  color: var(--neon-clr);
+  font-size: 0.7rem;
+  margin-bottom: 0.5rem;
 }
