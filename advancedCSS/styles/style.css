@@ -55,17 +55,18 @@ section:last-child {
 }
 
 .post img {
-  max-width: 100%;
+  width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
+  object-position: center;
 }
 
 /* ########################################################## */
-/*  Свойство image-set. Эффективные фоновые изображения в CSS */
+/*              Адаптивные изображения. Teg <picture>         */
 /* ########################################################## */
 
 .pictureSec img {
-  max-width: 100%;
+  width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
@@ -73,3 +74,26 @@ section:last-child {
 /* ########################################################## */
 /*  Свойство image-set. Эффективные фоновые изображения в CSS */
 /* ########################################################## */
+
+.imageSetSec .cardWrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.imageSetSec .card {
+  width: 45%;
+}
+
+.imageSetSec .card h2 {
+  margin-top: 3rem;
+}
+
+.imageSetSec .cardImg {
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid #000;
+  background-size: cover;
+  background-position: center;
+  background-image: image-set("../images/m_1_230.jpg" 1x, "../images/m_1_384.jpg" 2x, "../images/m_1_576.jpg" 3x);
+}
