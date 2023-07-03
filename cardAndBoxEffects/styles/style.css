@@ -1,0 +1,121 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+body {
+  font-size: 16px;
+  background-color: #f6f16a;
+}
+
+.container {
+  max-width: 1280px;
+  text-align: center;
+  margin: auto;
+}
+
+.title {
+  color: #62a8c7;
+  margin: 25px auto;
+  font-size: 4rem;
+  text-transform: uppercase;
+  text-shadow:
+    1px 1px 5px #333,
+    2px 2px 7px #444,
+    3px 3px 9px #555,
+    4px 4px 12px #666,
+    5px 5px 15px #777;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  border-bottom: 2px dotted #798a9b;
+  padding: 5rem 0;
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+}
+
+section:last-child {
+  margin-bottom: 8rem;
+}
+
+.linkToLesson {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.1rem;
+  margin-top: 3rem;
+}
+
+.yt {
+  color: red
+}
+
+/* ############################################## */
+/* Realistic Reflection Effect with HTML/CSS Only */
+/* ############################################## */
+
+.reflectionSect {
+  background-color: #ffffff;
+}
+
+.reflectionWrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  perspective: 500px;
+  margin-bottom: 6rem;
+}
+
+.reflection {
+  width: 500px;
+  height: 333px;
+  position: relative;
+
+  box-shadow: 0 50px 70px rgba(0, 0, 0, 0.3),
+    0 10px 10px rgba(0, 0, 0, 0.1)
+}
+
+.reflection:nth-child(odd) {
+  background: url(../images/flowers-gb488a0869_640.jpg);
+  background-size: cover;
+  background-position: bottom;
+  transform: rotateY(5deg);
+}
+
+.reflection:nth-child(even) {
+  background: url(../images/model-gd6eb10c3d_640.jpg);
+  background-size: cover;
+  background-position: bottom;
+  transform: rotateY(-5deg);
+
+}
+
+.reflection::after {
+  content: "";
+  background-image: inherit;
+  background-size: cover;
+  background-position: bottom;
+  width: inherit;
+  height: 40%;
+  position: absolute;
+  bottom: -41%;
+  left: 0;
+  transform: scaleY(-1);
+  opacity: 0.5;
+}
+
+.reflection::before {
+  content: "";
+  width: inherit;
+  height: 42%;
+  position: absolute;
+  left: 0;
+  bottom: -42%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), white);
+  z-index: 1;
+}
