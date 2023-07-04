@@ -2,7 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
 
-
 * {
   padding: 0;
   margin: 0;
@@ -536,4 +535,53 @@ section:last-child {
   color: var(--neon-clr);
   font-size: 0.7rem;
   margin-bottom: 0.5rem;
+}
+
+/* ######################################### */
+/* ###     Анимированное окно поиска      ## */
+/* ######################################### */
+
+.searchInputSec {
+  background: linear-gradient(45deg, #00b7ff, #ffffc7);
+}
+
+.searchInputWrap {
+  display: flex;
+  background: linear-gradient(45deg, #333, #5a5454);
+  box-sizing: initial;
+  height: 3rem;
+  border-radius: 3rem;
+  padding: 5px;
+}
+
+.searchInputWrap:hover input {
+  width: 250px;
+  padding: 0px 10px;
+}
+
+.searchInputWrap:hover button {
+  background-color: #e6e6e6;
+}
+
+.searchInputSec input {
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0;
+  width: 0;
+  font-size: 1.1rem;
+  color: white;
+  transition: .4s;
+}
+
+.searchInputSec button {
+  color: #00b7ff;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: none;
+  background-color: #333;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: .4s;
 }
